@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+<script>
+    //b1: xây dựng lơp mydate với  phương thức khởi  tạo 3 thám số truyền vào
+    let MyDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        //b2: xây dựng  phương  thưc  trả  về ngày tháng năm
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        //b3: xay dựng phương thức thiết lập lại giá trị các thuộc tính day,month, year
+        this.setDay = function (day) {
+            this.day = day;
+
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setYear = function (year) {
+            this.year = year;
+        }
+    }
+    //b4: Su dung lop vua tao .Taoj ddoi duong date
+    let date = new MyDate(2, 10, 2007);
+    //b5 :truy cap phuong thuc cua  lop date
+    let day = date.getDay();// truyen vao gia tri  2 cho day
+    let month = date.getMonth(); //truyen vao 2
+    let year = date.getYear();// 2007
+    //b6:
+    alert(day + '/' + month + "/" + year);
+    //b7: chayj truonwg trinh quan sat ket qua
+    //b8 : goi phuong  thuc thay doi ngay mthang , nam cua doi tuong date vuar tao .,phuongw thuc set laf truyenf vaof
+  //truyền  vào cho  date bằng phương  thức set luôn ,
+    date.setDay(10);
+    date.setMonth(10);
+    date.setYear(2019);
+    /////////////// in lại giá trị của day month ,year sau khi truyền lại
+    day = date.getDay();
+    month = date.getMonth();
+    year = date.getYear();
+    alert(day + '/' + month + "/" + year);
+
+
+</script>
+</body>
+</html>
